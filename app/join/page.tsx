@@ -1,7 +1,11 @@
-export default function Join () {
+import { JoinUsForm } from "@/components/section/join-us-form";
+import JoinUsHero from "@/components/section/join-us-hero";
+
+export default function Join() {
     return (
-        <div>
-            <h1>Be a part</h1>
+        <div className="">
+            <JoinUsHero />
+            <JoinUsForm />
         </div>
     )
 }

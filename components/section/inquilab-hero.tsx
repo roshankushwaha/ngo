@@ -1,11 +1,10 @@
-import { Button } from "@/components/ui/button"
-import { H1, P } from "@/components/ui/typography"
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function InquilabHero() {
     return (
-        <section className="relative min-h-[calc(100vh-64px)] flex items-center">
+        <section className="relative min-h-[calc(100vh-64px)] flex items-center justify-center overflow-hidden">
 
             <Image
                 src="/inquilab_hero.png"
@@ -15,32 +14,41 @@ export default function InquilabHero() {
                 className="object-cover"
             />
 
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-            <div className="relative z-10 mx-auto max-w-6xl px-6">
+            <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white">
 
-                <div className="max-w-4xl text-left text-white">
+                <p className="mb-4 text-xs tracking-widest uppercase text-white/70">
+                    A National Movement
+                </p>
 
-                    <H1 className="leading-tight text-white">
-                            Padma Shri for Shaheed Bhagat Singh
-                    </H1>
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">
+                    Inquilab Zindabad
+                </h1>
 
-                    <P className="mt-6 text-lg text-white/90">
-                        A national movement to honor the revolutionary who gave everything for India,
-                        yet remains unrecognized.
-                    </P>
+                <p className="mt-4 text-lg md:text-xl text-white/85">
+                    Padma Shri for Shaheed Bhagat Singh
+                </p>
 
-                    <div className="mt-10 flex gap-4">
-                        <Button size="lg" asChild>
-                            <Link href="/join">Join the Movement</Link>
-                        </Button>
+                <div className="mt-10 flex justify-center gap-4">
+                    <Button
+                        size="lg"
+                        className="rounded-full px-8"
+                        asChild
+                    >
+                        <Link href="/join">Join the Movement</Link>
+                    </Button>
 
-                        <Button size="lg" variant="outline" asChild>
-                            <Link href="/donate">Donate</Link>
-                        </Button>
-                    </div>
-
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="rounded-full px-8 text-white border-white/40 hover:bg-white/10"
+                        asChild
+                    >
+                        <Link href="/donate">Donate</Link>
+                    </Button>
                 </div>
+
             </div>
         </section>
     )
